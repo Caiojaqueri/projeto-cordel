@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {/*font-family coipadas do google fonts*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+html, body {
+    min-height: 100vh; /*altura mínima da viewport*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*transforma o texto em maiúsculo, mas a primeira letra fica maior, estéticamente fica melhor. Tem outra forma de colocar todas as letras em maúsculas - text-transform: uppercase;*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*tamanho da fonte em relação a largura da view port, assim o tamanho da fonte muda dependendo do tamanho da tela, não é a melhor opção pois ainda não aprendi sobre mediaquery*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+section {
+    padding-top: 10vh; /*10% da altura da view port*/
+    padding-bottom: 10vh; /*espaço em cima e embaixo de todas as sections para o efeito paralax funcionar */
+    line-height: 2em; /*espaçamento entre as linhas*/
+    padding-left: 30px; /*espaço da margem esquerda*/
+    font-family: var(--font3);
+    font-size: 3.5vw; /*tamanho da fonte em relação a largura da view port, assim o tamanho da fonte muda dependendo do tamanho da tela, não é a melhor opção pois não aprendi ainda sobre mediaquery*/ 
+}
+
+section > p {
+    padding-bottom: 2em; /*espaço entre os parágrafos*/
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.475);
+    /*sombra interna na caixa*/
+    background-size: cover; /*faz com que a imagem cubra todo o espaço disponível*/
+    background-attachment: fixed; /*faz com que a imagem fique fixa, criando o efeito paralax*/
+}
+
+section.imagem > p {
+    background-color: rgba(20, 20, 20, 0.514);
+    display: inline-block; /*faz com que a caixa se adapte conforme o conteúdo*/
+    padding: 10px;
+    text-shadow: 1px 1px 0px black /*sombra do texto, 1px para direita, 1px para baixo, desfoque de 0px, cor preta*/
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /*alinha a imagem ao centro na vertical e a direita na horizontal*/
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+}
+
+a {
+    color: white;
+    text-decoration: none; /*tira o sublinhado do link*/
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline; /*sublinha o link quando o mouse passa por cima*/
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
