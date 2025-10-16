@@ -74,12 +74,12 @@ section.imagem > p {
 }
 
 section#img01 {
-    background-image: url('./imagens/background001.jpg');
+    background-image: url('imagens/background001.jpg');
     background-position: right center; /*alinha a imagem ao centro na vertical e a direita na horizontal*/
 }
 
 section#img02 {
-    background-image: url('./imagens/background002.jpg');
+    background-image: url('imagens/background002.jpg');
 }
 
 a {
